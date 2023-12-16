@@ -1,0 +1,212 @@
+.home {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.content {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.app-logo {
+    height: 50px;
+}
+
+.col-content {
+    display: flex;
+    margin: 25px;
+    border: 1px solid silver;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 50vw;
+}
+
+.own-collections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+
+}
+
+button {
+    color: white;
+    background-color: var(--button-color);
+    border-radius: 5px !important;
+    border: 1px solid var(--button-color);
+    margin-top:10px;margin-right: 10px;
+}
+
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-tb {
+    width: 100%;
+    height: fit-content;
+    background: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 33px 30px;
+}
+
+.wrap-tb {
+    width: 1170px;
+}
+
+.tb {
+    background-color: #fff;
+}
+
+.m-b-110 {
+    margin-bottom: 110px;
+}
+
+.tb-head th {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.tb-body td {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.tb {
+    position: relative;
+    padding-top: 60px;
+}
+
+.tb-head {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.tb-body {
+    max-height: 585px;
+    overflow: auto;
+}
+
+.tb.ver2 .tb-head {
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tb.ver2 th {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--tb-header-text);
+    line-height: 1.4;
+    background-color: transparent;
+}
+
+.tb.ver2 td {
+    font-size: 15px;
+    color: black;
+    line-height: 1.4;
+}
+
+.tb.ver2 .tb-body tr {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.tb.ver2 {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+    -o-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+    -ms-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+}
+
+.column1 {
+    width: 13%;
+    padding-left: 40px;
+}
+
+.column2 {
+    width: 33%;
+}
+
+.column3 {
+    width: 22%;
+}
+
+.column4 {
+    width: 19%;
+}
+
+.column5 {
+    width: 13%;
+}
+
+table {
+    width: 100%;
+}
+
+th,
+td {
+    font-weight: unset;
+    padding-right: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    border: 2px solid white;
+    background-color: #b2bec3;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #dfe6e9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.card {
+    padding: 15px;
+    border-radius: 20px;
+    max-width: 30vw;
+
+    input {
+        margin-top: 10px;
+        width: 100%;
+        background-color: var(--input-bg-color);
+        border-radius: 8px;
+        padding: 8px 17px;
+        border: 1px solid var(--input-border-color);
+    };
+
+    button {
+        margin-top: 10px;
+        width: 100%;
+        border-radius: 8px;
+        padding: 8px 17px;
+        background-color: var(--auth-button-color);
+        border: 1px solid var(--input-border-color);
+    }
+
+}

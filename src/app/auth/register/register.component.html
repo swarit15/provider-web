@@ -1,0 +1,118 @@
+<div class="home">
+    <div class="content">
+        <div>
+            <img src="assets/app_logo.png" class="app-logo" alt="app logo"/>
+        </div>
+        <div>
+            <div class="home-desc">
+                Welcome to ShootShip - Best way to manage and share
+            </div>
+        </div>
+    </div>
+    <div class="auth-section">
+        <div class="app-home">
+            <img src="assets/home_img1.png" class="home-img" alt="app home"/>
+        </div>
+            <div class="card d-flex" *ngIf="showLogin">
+                <div class="col-sm-12 col-xs-12 c2">
+                    <form (ngSubmit)="onSignInSubmit()" [formGroup] = "loginForm" class="px-5 pb-5">
+                        <div class="d-flex pb-5">
+                            <h3 class="font-weight-bold">Welcome Back!..</h3>
+                        </div>
+                        <div>
+                            <input type="email" formControlName="email" placeholder="Email" [ngClass]="{
+                                'is-invalid': signIn.email.dirty && signIn.email.errors
+                            }"> 
+                            <div *ngIf="signIn.email.dirty && signIn.email.errors" class="form-input-error">
+                                Email is not valid
+                            </div>
+                        </div>
+                        <div>
+                            <input type="password" formControlName="passw" placeholder="Password" [ngClass]="{
+                                'is-invalid': signIn.passw.dirty && signIn.passw.errors
+                            }"> 
+                            <div *ngIf="signIn.passw.dirty && signIn.passw.errors" class="form-input-error">
+                                Password is not valid
+                            </div>
+                        </div>
+                        <button type="submit" [disabled]="loginForm.invalid" class="text-white bt">Sign In</button>
+                        <div class="d-flex justify-content-center">
+                            <div>Don't have an Account? <a (click)="toggleDiv()">Sign Up</a> </div>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+          
+            <div class="card d-flex" *ngIf="!showLogin">
+                <div class="col-sm-12 col-xs-12 c2">
+                    <form [formGroup] = "registerForm"
+                        (ngSubmit)="onSignUpSubmit()"
+                        class="px-5 pb-5">
+                        <div class="d-flex pb-3">
+                            <h3 class="font-weight-bold">Create Account</h3>
+                        </div> 
+                        <div class="reg-response" *ngIf="signUpSuccess">
+                            <div>
+                                <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                      <path class="circle" d="M13 1C6.372583 1 1 6.372583 1 13s5.372583 12 12 12 12-5.372583 12-12S19.627417 1 13 1z"/>
+                                      <path class="tick" d="M6.5 13.5L10 17 l8.808621-8.308621"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div> Successfully Registered</div>
+                        </div>
+                        
+                        <div class="row g-2 mt-1">
+                            <div class="col-md-6">
+                                <input type="text" formControlName="userFn" placeholder="First Name" [ngClass]="{
+                                    'is-invalid': signUp.userFn.dirty && signUp.userFn.errors
+                                }"> 
+                                <div *ngIf="signUp.userFn.dirty && signUp.userFn.errors" class="form-input-error">
+                                    First Name is not valid
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" formControlName="userLn" placeholder="Last Name" [ngClass]="{
+                                    'is-invalid': signUp.userLn.dirty && signUp.userLn.errors
+                                }"> 
+                                <div *ngIf="signUp.userLn.dirty && signUp.userLn.errors" class="form-input-error">
+                                    Last Name is not valid
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="email" formControlName="email" placeholder="Email" [ngClass]="{
+                                'is-invalid': signUp.email.dirty && signUp.email.errors
+                            }"> 
+                            <div *ngIf="signUp.email.dirty && signUp.email.errors" class="form-input-error">
+                                Email is not valid
+                            </div>
+                        </div>
+                        <div>
+                            <input type="number" formControlName="userMobile" placeholder="Mobile Number" [ngClass]="{
+                                'is-invalid': signUp.userMobile.dirty && signUp.userMobile.errors
+                            }"> 
+                            <div *ngIf="signUp.userMobile.dirty && signUp.userMobile.errors"  class="form-input-error">
+                                Mobile Number is not valid
+                            </div>
+                        </div>
+                        <div>
+                            <input type="password" formControlName="passw" placeholder="Password" [ngClass]="{
+                                'is-invalid': signUp.passw.dirty && signUp.passw.errors
+                            }"> 
+                            <div *ngIf="signUp.passw.dirty && signUp.passw.errors" class="form-input-error">
+                                Password is not valid
+                            </div>
+                        </div>
+                        <button type="submit" [disabled]="registerForm.invalid" class="text-white bt">Sign Up</button>
+                        <div class="d-flex justify-content-center">
+                            <div>Already have an Account? <a (click)="toggleDiv()">Sign In</a> </div>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+    </div>
+</div>
+
+  

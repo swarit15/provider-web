@@ -1,0 +1,121 @@
+.home {
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 100vh;
+  width: 100vw;
+}
+
+.content {
+  padding: 20px;
+}
+
+.app-logo {
+  height: 50px;
+}
+
+.app-home {
+  display: flex;
+  z-index: 999999;
+  position: absolute;
+}
+.home-img {
+  height: 50vh;
+  margin-left: -100px;
+  margin-top: 250px;
+}
+
+.home-desc {
+  color: white;
+  font-weight: 400;
+  font-size: 28px;
+  width: 18vw;
+  padding-top: 30px;
+}
+
+.auth-section {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  background-color: white;
+}
+
+.card {
+  padding: 0px 15px;
+  border-radius: 20px;
+  max-width: 30vw;
+  margin-left: 30vw;
+  margin-top: 30vh;
+}
+
+a {
+  cursor: pointer;
+  color: var(--secondary-color) !important;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+input,
+button {
+  width: 100%;
+  background-color: var(--input-bg-color);
+  border-radius: 8px;
+  padding: 8px 17px;
+  border: 1px solid var(--input-border-color);
+}
+
+
+.bt {
+  background-color: var(--auth-button-color);
+  border: 1px solid var(--input-border-color);
+}
+
+.bt:hover {
+  font-weight: bold;
+}
+
+
+form {
+  margin-top: 70px;
+  max-width: 30vw;
+}
+
+form>* {
+  margin: 10px 0px;
+}
+
+.is-invalid {
+  border: 1px solid red;
+}
+
+.reg-response {
+  display: flex;
+  flex-direction: row;
+  margin: 0 50px !important;
+}
+
+svg {
+  display: block;
+  height: 5vh;
+  width: 5vw;
+  color: var(--secondary-color);
+}
+
+.circle {
+  stroke-dasharray: 76;
+  stroke-dashoffset: 76;
+  animation: draw 1s forwards;
+}
+
+.tick {
+  stroke-dasharray: 18;
+  stroke-dashoffset: 18;
+  animation: draw 1s forwards 1s;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0
+  }
+}
